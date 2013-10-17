@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans 	xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+	
+	
+	<bean id="userDwrManager" class="fr.k2i.adnjoy.dwr.impl.UserDwrManagerImpl">
+		<property name="userManager">
+			<ref bean="userManager" />
+		</property>
+	</bean>
+	
+	<bean id="countryDwrManager" class="fr.k2i.adnjoy.dwr.impl.CountryDwrManagerImpl">
+		<property name="countryManager">
+			<ref bean="countryManager" />
+		</property>
+	</bean>
+	
+	<bean id="brandDwrManager" class="fr.k2i.adnjoy.dwr.impl.BrandDwrManagerImpl">
+		<property name="brandManager">
+			<ref bean="brandManager" />
+		</property>
+	</bean>
+
+	<bean id="adDwrManager" class="fr.k2i.adnjoy.dwr.impl.AdDwrManagerImpl">
+		<property name="adManager">
+			<ref bean="adManager" />
+		</property>
+		<property name="fileManager">
+			<ref bean="fileManager" />
+		</property>
+	</bean>
+	
+	<bean id="blindTestDwrManager" class="fr.k2i.adnjoy.dwr.impl.BlindTestDwrManagerImpl">
+		<property name="scoreBlindTestManager">
+			<ref bean="scoreBlindTestManager" />
+		</property>
+		<property name="userManager">
+			<ref bean="userManager" />
+		</property>
+	</bean>
+	
+	<bean id="tvBlindTestDwrManager" class="fr.k2i.adnjoy.dwr.impl.TVBlindTestDwrManagerImpl">
+		<property name="tvScoreBlindTestManager">
+			<ref bean="tvScoreBlindTestManager" />
+		</property>
+		<property name="userManager">
+			<ref bean="userManager" />
+		</property>
+		<property name="listenerPlayGame">
+			<ref bean="listenerPlayGame" />
+		</property>
+	</bean>
+
+	<bean id="chanelDwrManager" class="fr.k2i.adnjoy.dwr.impl.ChanelDwrManagerImpl">
+		<property name="chanelManager">
+			<ref bean="chanelManager" />
+		</property>
+		<property name="userManager">
+			<ref bean="userManager" />
+		</property>
+	</bean>
+	
+	<bean id="wonJackPotDwrManager" class="fr.k2i.adnjoy.dwr.impl.WonJackPotDwrManagerImpl">
+		<property name="wonJackPotManager">
+			<ref bean="wonJackPotManager" />
+		</property>
+	</bean>
+	
+	<bean id="dwrSecu" class="fr.k2i.adnjoy.dwr.security.DwrSecurity">
+		<property name="userManager">
+			<ref bean="userManager"/>
+		</property>
+	</bean>
+	
+	<aop:config>
+		<aop:pointcut id="servicePointcut"  expression="execution(* fr.k2i.adnjoy.dwr.impl.*.*(..))"/>    		
+		<aop:aspect id="securityAspect" ref="dwrSecu">
+		    <aop:around method="securityDwr" pointcut-ref="servicePointcut"/>
+	    </aop:aspect>	    
+	</aop:config>
+	
+
+</beans>

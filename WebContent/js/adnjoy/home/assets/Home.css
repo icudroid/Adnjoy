@@ -1,0 +1,100 @@
+.jackpotValue {
+	margin-right: 0;
+	margin-top: 0;
+	opacity: 1;
+	position: absolute;
+	right: -95px;
+	top: 165px;
+}
+
+.jackpotValue span {
+	-moz-border-radius: 3px 3px 3px 3px;
+	background-color: #000000;
+	color: #FFFFFF !important;
+	display: inline-block;
+	font-size: 20px;
+	font-weight: bold;
+	height: 20px;
+	line-height: 20px;
+	opacity: 0.75;
+	padding: 5px;
+	vertical-align: top;
+}
+
+.lastWin {
+	left:-95px;
+	margin-right: 0;
+	margin-top: 0;
+	opacity: 1;
+	position: absolute;
+	top:20px;
+}
+
+.lastWin span {
+	-moz-border-radius: 3px 3px 3px 3px;
+	background-color: #000000;
+	color: #FFFFFF !important;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 12px;
+	opacity: 0.75;
+	padding: 5px;
+	vertical-align: top;
+}
+
+.jackpotDisplay {
+	background-color: white;
+	position: relative;
+}
+
+#newAdsContainer {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.imgCenter {
+	max-height: 170px;
+	max-width: 170px;
+	vertical-align: middle;
+	border: #dadada 1px solid;
+}
+
+.centerContainer:HOVER {
+	background-color: #DADADA;
+}
+
+.centerContainer {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	width: 200px;
+	height: 200px;
+	border: #dadada 1px solid;
+}
+
+.centerContainer img {
+	cursor: pointer;
+}
+
+.centerContainer * {
+	vertical-align: middle;
+}
+
+.centerContainer {
+	display: block;
+}
+
+.centerContainer span {
+	display: inline-block;
+	height: 100%;
+	width: 1px;
+}
+
+.yui-skin-sam .yui-carousel-nav {
+	background-position: 0 -1300px;
+}
+
+.yui-carousel-pagination{
+	color: #15428B;
+}

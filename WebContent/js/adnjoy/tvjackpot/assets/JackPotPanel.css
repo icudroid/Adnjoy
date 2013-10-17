@@ -1,0 +1,49 @@
+#panelQuestionContainer {
+	border: 1px solid #005EA8;
+	padding-left: 15px;
+}
+
+
+.btnSize {
+	height: 120px !important;
+	width: 600px !important;
+	padding-left: 0 !important;
+}
+
+#q0,#q1,#q2 {
+	margin-bottom: 15px;
+}
+
+.reponseLabel,.questionLabel,.panelQuestionContainer {
+	color: #005EA8;
+	font-size: 100%;
+	font-weight: bold;
+	text-align: left;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.responseDiv {
+	color: #005EA8;
+	font-size: 100%;
+	font-weight: bold;
+	text-align: left;
+}
+
+#jackpotPB {
+	margin: 4px;
+}
+
+.question {
+	font-size: 100%;
+	font-weight: bold;
+	text-align: left;
+	padding-right: 15px;
+}
+
+#resultContainer {
+	color: #005EA8;
+	font-size: 200%;
+	font-weight: bold;
+	text-align: center;
+}

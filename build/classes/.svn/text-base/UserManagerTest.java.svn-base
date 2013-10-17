@@ -1,0 +1,45 @@
+import java.util.GregorianCalendar;
+
+import javax.annotation.Resource;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import fr.k2i.adnjoy.business.user.Sex;
+import fr.k2i.adnjoy.business.user.User;
+import fr.k2i.adnjoy.dao.UserDao;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration("/applicationContext-*.xml")  
+public class UserManagerTest {
+	
+	
+    private UserDao userDao;
+    
+    @Resource
+	public void setUserDao(UserDao userDao) {
+		this.userDao = userDao;
+	}
+
+	@Test
+	public void testAddUser() throws Exception {
+		User u = new User();
+		u.setEmail("dimitri@d-kahn.net");
+		u.setFirstName("Dimitri");
+		u.setLastName("KAHN");
+		u.setPassword("1234");
+		u.setPseudo("smartICU");
+		u.setSex(Sex.MR);
+		u.setValidated(true);
+		u.setAddress1("18 G rue du val notre Dame");
+		u.setBirthday(new GregorianCalendar(1977,4,1).getTime());
+		u.setCity("Argenteuil");
+		u.setValidateUrl("");
+		u.setZipCode("95100");
+		userDao.save(u);
+	}
+
+
+}

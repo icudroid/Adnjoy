@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">	
+
+	<!-- Session Hibernate managé par Spring -->
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+
+	<property name="annotatedClasses">
+     <list>
+     	<value>fr.k2i.adnjoy.business.Country</value>
+     	<value>fr.k2i.adnjoy.business.File</value>
+     	
+     	<!-- package USER -->
+		<value>fr.k2i.adnjoy.business.user.User</value>
+		<value>fr.k2i.adnjoy.business.user.FriendsGroup</value>
+		<value>fr.k2i.adnjoy.business.user.UserFriend</value>
+		<value>fr.k2i.adnjoy.business.user.Profile</value>
+		<value>fr.k2i.adnjoy.business.user.Job</value>
+		<value>fr.k2i.adnjoy.business.user.ReceivedOffer</value>
+		
+		<!-- package SCORE -->
+		<value>fr.k2i.adnjoy.business.score.Score</value>
+		<value>fr.k2i.adnjoy.business.score.NetScore</value>
+		<value>fr.k2i.adnjoy.business.score.TVScore</value>
+		
+		<!-- package OBJECT -->
+		<value>fr.k2i.adnjoy.business.object.StockObject</value>
+		<value>fr.k2i.adnjoy.business.object.WinObject</value>		
+		
+		<!-- package JACKPOT -->
+		<value>fr.k2i.adnjoy.business.jackpot.JackPot</value>
+		<value>fr.k2i.adnjoy.business.jackpot.NetJackPot</value>
+		<value>fr.k2i.adnjoy.business.jackpot.TVJackPot</value>
+		
+		<!-- package JACKPOT.WON -->
+    	<value>fr.k2i.adnjoy.business.jackpot.won.WonJackPot</value>
+		<value>fr.k2i.adnjoy.business.jackpot.won.NetWonJackPot</value>
+		<value>fr.k2i.adnjoy.business.jackpot.won.TVWonJackPot</value>
+		<value>fr.k2i.adnjoy.business.jackpot.won.ChanelWonJackPot</value>
+    			
+		<!-- package JACKPOT.CHANEL -->
+		<value>fr.k2i.adnjoy.business.jackpot.chanel.JackPotQuestion</value>
+		<value>fr.k2i.adnjoy.business.jackpot.chanel.Response</value>
+		<value>fr.k2i.adnjoy.business.jackpot.chanel.ChanelJackPot</value>
+		
+		
+		<!-- package AD -->
+		<value>fr.k2i.adnjoy.business.ad.Ad</value>
+		<value>fr.k2i.adnjoy.business.ad.AdBrandPossibiliites</value>
+		<value>fr.k2i.adnjoy.business.ad.Brand</value>
+		<value>fr.k2i.adnjoy.business.ad.Chanel</value>
+		<value>fr.k2i.adnjoy.business.ad.NotationAd</value>
+		<value>fr.k2i.adnjoy.business.ad.Question</value>
+		<value>fr.k2i.adnjoy.business.ad.QuestionByProfile</value>
+		<value>fr.k2i.adnjoy.business.ad.Type</value>
+		<value>fr.k2i.adnjoy.business.ad.NoShowWith</value>
+     </list>
+   </property>
+
+		
+	<property name="hibernateProperties">
+		<value>
+			hibernate.dialect=org.hibernate.dialect.MySQLDialect
+<!--			hibernate.dialect=org.hibernate.dialect.HSQLDialect-->
+<!--			hibernate.dialect=org.hibernate.dialect.Oracle9iDialect-->
+			hibernate.cache.provider_class=org.hibernate.cache.EhCacheProvider
+			hibernate.cache.use_query_cache=true
+<!--			hibernate.show_sql=true-->
+			hibernate.transaction.factory_class=org.hibernate.transaction.JDBCTransactionFactory
+<!--			hibernate.hbm2ddl.auto=update-->
+		</value>
+	</property>
+	</bean>
+	<!-- transaction -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="userDao" class="fr.k2i.adnjoy.dao.impl.UserDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="countryDao" class="fr.k2i.adnjoy.dao.impl.CountryDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="brandDao" class="fr.k2i.adnjoy.dao.impl.BrandDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="adDao" class="fr.k2i.adnjoy.dao.impl.AdDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="fileDao" class="fr.k2i.adnjoy.dao.impl.FileDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="typeDao" class="fr.k2i.adnjoy.dao.impl.TypeDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="scoreBlindTestDao" class="fr.k2i.adnjoy.dao.impl.ScoreBlindTestDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="jackPotDao" class="fr.k2i.adnjoy.dao.impl.JackPotDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="stockObjectDao" class="fr.k2i.adnjoy.dao.impl.StockObjectDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="winObjectDao" class="fr.k2i.adnjoy.dao.impl.WinObjectDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+		
+	<bean id="wonJackPotDao" class="fr.k2i.adnjoy.dao.impl.WonJackPotDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="chanelDao" class="fr.k2i.adnjoy.dao.impl.ChanelDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="noShowWithDao" class="fr.k2i.adnjoy.dao.impl.NoShowWithDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+
+	<bean id="friendsGroupDao" class="fr.k2i.adnjoy.dao.impl.FriendsGroupDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="userFriendDao" class="fr.k2i.adnjoy.dao.impl.UserFriendDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="receivedOfferDao" class="fr.k2i.adnjoy.dao.impl.ReceivedOfferDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+</beans>

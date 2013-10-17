@@ -1,0 +1,37 @@
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import fr.k2i.adnjoy.business.File;
+import fr.k2i.adnjoy.dao.FileDao;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration("/applicationContext-*.xml")  
+public class FileManagerTest {
+	
+	
+    private FileDao fileDao;
+    
+    @Resource
+	public void setFileDao(FileDao fileDao) {
+		this.fileDao = fileDao;
+	}
+
+	@Test
+	public void testMofifyPath() throws Exception {
+		List<File> all = fileDao.getAll();
+		for (File file : all) {
+			String f = "g:"+ file.getFile().substring("/home/dimitri/adnjoy".length(),file.getFile().length());
+			file.setFile(f);
+			fileDao.save(file);
+		}
+	}
+
+
+
+}

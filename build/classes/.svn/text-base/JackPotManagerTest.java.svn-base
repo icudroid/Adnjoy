@@ -1,0 +1,45 @@
+import java.util.GregorianCalendar;
+
+import javax.annotation.Resource;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import fr.k2i.adnjoy.business.jackpot.JackPot;
+import fr.k2i.adnjoy.manager.JackPotManager;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration("/applicationContext-*.xml")  
+public class JackPotManagerTest {
+	
+	
+    private JackPotManager jackPotManager;
+    
+    
+    @Resource
+	public void setJackPotManager(JackPotManager jackPotManager) {
+		this.jackPotManager = jackPotManager;
+	}
+
+
+
+//	@Test
+//	public void testGenerateNetJackPot() throws Exception {
+//		jackPotManager.generateDayJackPots(new GregorianCalendar(2010,5,12),8,3);
+//	}
+
+	@Test
+	public void testGenerateTVJackPot() throws Exception {
+		jackPotManager.generateDayTVJackPots(new GregorianCalendar(2010,5,12),8,3);
+	}
+//
+//	@Test
+//	public void testNext() throws Exception {
+//		JackPot nextJackPot = jackPotManager.getNextJackPot();
+//		System.out.println(nextJackPot.getStartDate());
+//	}
+
+
+}

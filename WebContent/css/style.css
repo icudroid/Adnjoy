@@ -1,0 +1,226 @@
+body {
+	margin: 0px;
+	background-color: #5e666d;
+	background-image: url(bk.jpg);
+	background-repeat: repeat-x;
+	background-position: top left;
+	font: 13px/ 1.231 arial, helvetica, clean, sans-serif;
+	color: #444444;
+	direction: ltr;
+}
+
+.spacer {
+	height: 25px;
+}
+
+.mainHeader {
+	background: transparent url(banner-logo.png) no-repeat scroll 0% 50%;
+	display: block;
+	height: 32px;
+	width: 172px;
+}
+
+.round-block {
+	background-image: url(banner-right.png);
+	height: 32px;
+	padding-right: 20px;
+	margin-top: -32px;
+}
+
+.adnjoy_header {
+	height: 120px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	background-image: url(banner-bg.png);
+	background-repeat: repeat-x;
+	border-bottom: 1px solid #878787;
+	border-bottom: 1px solid #878787;
+	/* background-color:#9CA5B7;*/
+	/*background-image:url("bkg_gradient.png");*/
+	/*background-repeat:repeat-x;*/ /*color:#333333;
+	background: transparent url(banner-logo.png) no-repeat scroll 0%	50%;*/
+	/*border: solid #DADADA;*/
+}
+
+.adnjoy_body {
+	padding: 15px;
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: solid #DADADA;
+	/*height: 640px;*/
+}
+
+.center_footer {
+	color: #FFFFFF;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.center_footer a {
+	color: #FFFFFF;
+}
+
+.adnjoy_footer { /*background:none repeat scroll 0 0 #CFD7E1;*/
+	background-image: url(tab-footer-bg.png);
+	background-repeat: repeat-x;
+	border-top: 1px solid #545454;
+	height: 32px;
+	position: relative;
+	/*background-image:url("bkg_gradient.png");
+	background-repeat:repeat-x;
+	color:#333333;*/ /*	border: solid #DADADA;*/
+}
+
+.adnjoy_footer_left {
+	background-image: url(tab-footer-left.png);
+	background-repeat: no-repeat;
+	height: 32px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 20px;
+}
+
+.adnjoy_footer_right {
+	background-image: url(tab-footer-right.png);
+	background-repeat: no-repeat;
+	height: 32px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 20px;
+}
+
+.logoAd {
+	float: left;
+	padding: 11px 0 0 20px;
+	position: relative;
+}
+
+#userAccount {
+	float: right;
+	padding-top: 60px;
+	padding-right: 15px;
+}
+
+.pageClass {
+	height: 100%;
+	margin: 0 auto;
+	padding: 22px 0 0;
+	position: relative;
+	width: 1000px;
+}
+
+#formulaire_content_div {
+	background-color: #FFFFFF;
+	border: 1px solid #A1A1A1;
+	margin-top: 2px;
+	text-align: center;
+}
+
+.field_div {
+	clear: both;
+	float: left;
+	padding-left: 4px;
+	text-align: left;
+	width: 100%;
+	padding-top: 5px;
+}
+
+.field_label_div {
+	float: left;
+	padding-right: 2px;
+	padding-top: 5px;
+	text-align: right;
+	width: 148px;
+}
+
+.field_input_div {
+	float: left;
+	padding-left: 2px;
+	text-align: left;
+	width: 276px;
+}
+
+.field_center_div {
+	float: left;
+	text-align: center;
+	width: 100%;
+}
+
+.field_verif_div {
+	float: left;
+	width: 48px;
+}
+
+#userAccount span.end {
+	padding-right: 0;
+}
+
+#userAccount a.start {
+	border-left: medium none;
+}
+
+#userAccount a {
+	border-left: 1px solid #FFFFFF;
+	padding: 0.1em 0.8em;
+	white-space: nowrap;
+	color: #FFFFFF;
+}
+
+#userAccount span {
+	border-left: 1px solid #FFFFFF;
+	padding: 0.1em 0.8em;
+	white-space: nowrap;
+	color: #FFFFFF;
+}
+
+a {
+	color: #0033CC;
+	text-decoration: none;
+}
+
+.txtLink {
+	cursor: pointer;
+}
+
+.fragment {
+	BORDER-RIGHT: #dadada 1px solid;
+	BORDER-TOP: #dadada 1px solid;
+	FONT-SIZE: 12px;
+	BORDER-LEFT: #dadada 1px solid;
+	BORDER-BOTTOM: #dadada 1px solid;
+	FONT-FAMILY: Arial, sans-serif
+}
+
+.fragment-title {
+	BORDER-RIGHT: 0px;
+	PADDING-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	PADDING-LEFT: 10px;
+	FONT-WEIGHT: bold;
+	BACKGROUND: url(stitle-bg.gif) #dadada repeat-x left top;
+	PADDING-BOTTOM: 4px;
+	BORDER-LEFT: 0px;
+	COLOR: #005592;
+	PADDING-TOP: 3px;
+	BORDER-BOTTOM: 0px
+}
+
+.fragment-content {
+	PADDING-RIGHT: 10px;
+	BORDER-TOP: #dadada 0px solid;
+	PADDING-LEFT: 5px;
+	PADDING-BOTTOM: 3px;
+	PADDING-TOP: 1px;
+	BACKGROUND-COLOR: #FFFFFF
+}
+
+.footer-login {
+	border-top: 1px solid #808080;
+	padding: 5px 10px;
+}
+
+#userAccount span.start {
+	border-left: medium none;
+}

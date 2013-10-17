@@ -1,0 +1,43 @@
+h1 {
+	font-size: x-large;
+}
+
+#ReplayBtn {
+	height: auto;
+}
+
+.lotWin {
+	display: inline;
+	text-align: center;
+}
+
+.Img {
+	max-height: 300px;
+	max-width: 300px;
+}
+
+.lotImg {
+	float: left;
+	width: 320px;
+}
+
+.lotDesc {
+	float: left;
+	text-align: left;
+}
+
+.lotDescTitle {
+	padding-bottom: 5px;
+	font-size: 130%;
+}
+
+.lotDescValue {
+	
+}
+
+.lotTitle {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 150%;
+	color: #15428B;
+}

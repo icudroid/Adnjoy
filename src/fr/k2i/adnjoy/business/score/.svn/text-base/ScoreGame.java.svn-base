@@ -1,0 +1,48 @@
+package fr.k2i.adnjoy.business;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table (name="TBL_SCORE_GAME")
+public class ScoreGame extends BusinessObject {
+
+	private static final long serialVersionUID = -4477129424237621633L;
+
+	private ScheduleAd schedule;
+	private Double score;
+	
+	
+	@ManyToOne( cascade = {CascadeType.PERSIST, CascadeType.MERGE} )
+	@JoinColumn(name="SCHEDULE_AD_ID")
+	public ScheduleAd getSchedule() {
+		return schedule;
+	}
+
+	public void setSchedule(ScheduleAd schedule) {
+		this.schedule = schedule;
+	}
+
+
+	public Double getScore() {
+		return score;
+	}
+
+
+	public void setScore(Double score) {
+		this.score = score;
+	}
+
+
+	@Id @GeneratedValue (strategy=GenerationType.AUTO)
+	public Long getId() {
+		return id;
+	}
+
+}

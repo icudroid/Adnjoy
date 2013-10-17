@@ -1,0 +1,40 @@
+.playerAd {
+	float: left;
+	width: 640px;
+}
+
+.btnSize {
+	height: 115px !important;
+	width: 290px !important;
+	padding-left: 0 !important;
+}
+
+.spacer {
+	padding-bottom: 23px;
+	padding-top: 23px;
+}
+
+#responses {
+	float: right;
+	width: 300px;
+	padding-right: 10px;
+	font-size: 145%;
+	text-align: center;
+}
+
+.max-img-size {
+	max-height: 95px;
+	max-width: 230px;
+}
+
+.explainBT {
+	font-size: 120%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#gameResume {
+	color: #15428B;
+	font-size: 200%;
+	padding: 10px;
+}

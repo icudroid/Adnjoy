@@ -1,0 +1,105 @@
+package fr.k2i.adnjoy.business;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
+
+@Entity
+@Table (name="TBL_CHANNEL")
+public class Channel extends BusinessObject {
+
+	private static final long serialVersionUID = -8804735069196110910L;
+	
+	private String name;
+	private String login;
+	private String password;
+	private String email;
+	private String phone;
+	private String fax;
+	
+	private Country country;
+	private DirectJackPot jackpot;
+	
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getFax() {
+		return fax;
+	}
+
+	public void setFax(String fax) {
+		this.fax = fax;
+	}
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@PrimaryKeyJoinColumn
+	public DirectJackPot getJackpot() {
+		return jackpot;
+	}
+
+	public void setJackpot(DirectJackPot jackpot) {
+		this.jackpot = jackpot;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@ManyToOne( cascade = {CascadeType.PERSIST, CascadeType.MERGE} )
+	@JoinColumn(name="COUNTRY_ID")
+	public Country getCountry() {
+		return country;
+	}
+
+	public void setCountry(Country country) {
+		this.country = country;
+	}
+
+	@Id @GeneratedValue (strategy=GenerationType.AUTO)
+	public Long getId() {
+		return id;
+	}
+
+}

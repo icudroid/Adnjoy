@@ -1,0 +1,57 @@
+#responsesBrand {
+	height: 550px;
+	margin-top: 25px;
+}
+
+.btnSize {
+	height: 115px !important;
+	width: 330px !important;
+	padding-left: 0 !important;
+}
+
+.spacer {
+	padding-bottom: 23px;
+	padding-top: 23px;
+}
+
+#playJackpot {
+	margin: 15px;
+}
+
+#containerPlayJackPot {
+	border: 1px solid #005EA8;
+	margin-bottom: 15px;
+}
+
+#containerPlayJackPot div {
+	color: #005EA8;
+	font-size: 100%;
+	font-weight: bold;
+	padding: 20px;
+}
+
+.max-img-size {
+	max-height: 95px;
+	max-width: 280px;
+}
+
+#playGamePanel {
+	width: 640px;
+}
+
+#gameResume {
+	color: #15428B;
+	font-size: 200%;
+	padding: 10px;
+}
+
+#responsesBrand{
+	font-size: 180%;
+	padding: 10px;
+	text-align: center;
+}
+
+#responsesBrand .explainBT {
+	padding: 10px;
+}
+ 

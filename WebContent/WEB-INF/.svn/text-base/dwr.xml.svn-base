@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN" "http://getahead.org/dwr//dwr30.dtd">
+<dwr>
+    <allow>
+<!--        <create creator="new" javascript="validator">-->
+<!--            <param name="class" value="org.apache.struts2.validators.DWRValidator"/>-->
+<!--        </create>-->
+<!--        <convert converter="bean" match="com.opensymphony.xwork2.ValidationAwareSupport"/>-->
+
+		<create creator="spring" javascript="userDwrManager" scope="application">
+			<param name="beanName" value="userDwrManager" />
+		</create>
+		
+		<create creator="spring" javascript="countryDwrManager" scope="application">
+			<param name="beanName" value="countryDwrManager" />
+		</create>
+
+		<create creator="spring" javascript="brandDwrManager" scope="application">
+			<param name="beanName" value="brandDwrManager" />
+		</create>
+
+		<create creator="spring" javascript="adDwrManager" scope="application">
+			<param name="beanName" value="adDwrManager" />
+		</create>
+		
+		<create creator="spring" javascript="blindTestDwrManager" scope="application">
+			<param name="beanName" value="blindTestDwrManager" />
+		</create>
+
+		<create creator="spring" javascript="tvBlindTestDwrManager" scope="application">
+			<param name="beanName" value="tvBlindTestDwrManager" />
+		</create>
+
+<!--		<create creator="spring" javascript="jackPotDwrManager" scope="application">-->
+<!--			<param name="beanName" value="jackPotDwrManager" />-->
+<!--		</create>-->
+		
+		<create creator="spring" javascript="chanelDwrManager" scope="application">
+			<param name="beanName" value="chanelDwrManager" />
+		</create>
+
+		<create creator="spring" javascript="wonJackPotDwrManager" scope="application">
+			<param name="beanName" value="wonJackPotDwrManager" />
+		</create>
+
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.CallBackData"/>
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.ErrorDwr"/>
+		
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.AccountUserBean"/>
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.CountryBean"/>
+		
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.BlindTestBean"/>
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.QuestionBean"/>
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.ResponseBean"/>
+		
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.ScoreBean"/>
+		
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.BrandBean"/>
+		
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.AdBean"/>
+		
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.JackPotClassementBean"/>
+		
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.WonObjectBean"/>
+		
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.ChanelBean"/>
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.JackPotQuestionBean"/>
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.JackPotResponseBean"/>
+
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.GetClassementBean"/>
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.MetaClassementBean"/>
+		
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.HomeJackPotWinnerBean"/>
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.HomeJackPotChanelBean"/>
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.JackPotResultBean"/>
+		
+		<convert converter="bean" match="fr.k2i.adnjoy.dwr.bean.EnumBean"/>
+		
+
+    </allow>
+</dwr>

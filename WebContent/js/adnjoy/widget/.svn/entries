@@ -1,0 +1,34 @@
+9
+
+dir
+164
+svn://127.0.0.1/TRUNCK/AdnJoy/WebContent/js/adnjoy/widget
+svn://127.0.0.1
+
+
+
+2010-04-17T16:20:55.250300Z
+160
+dimitri
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9de293bf-c404-3d47-932a-a38deeaa87b1
+
+calendarcontainer
+dir
+
+playerpanel
+dir
+

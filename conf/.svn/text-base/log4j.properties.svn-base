@@ -1,0 +1,42 @@
+# en dev on affiche pas les erreurs sur la console
+log4j.rootLogger=WARN, AppenderToFile1, CONSOLE
+
+# A1 is set to be a ConsoleAppender.
+log4j.appender.CONSOLE=org.apache.log4j.ConsoleAppender
+
+# A1 uses PatternLayout.
+log4j.appender.CONSOLE.layout=org.apache.log4j.PatternLayout
+log4j.appender.CONSOLE.layout.ConversionPattern=%d{dd-MM-yyyy HH:mm:ss} %-5p [%c{1}] %m%n
+
+log4j.appender.AppenderToFile1=org.apache.log4j.FileAppender
+log4j.appender.AppenderToFile1.File=D:/adnjoy.log
+log4j.appender.AppenderToFile1.layout=org.apache.log4j.PatternLayout 
+log4j.appender.AppenderToFile1.layout.ConversionPattern = %d{dd-MM-yyyy HH:mm:ss} %-5p [%c{1}] %m%n
+# Change the level of messages for various packages.
+log4j.logger.org.castor = ERROR
+log4j.logger.fr.k2i.adnjoy=INFO
+log4j.logger.org.apache=WARN
+log4j.logger.org.springframework=WARN
+log4j.logger.org.hibernate=INFO
+log4j.logger.net.sf.ehcache=WARN
+log4j.logger.net.sf.navigator=WARN
+log4j.logger.uk.ltd.getahead.dwr=WARN
+
+
+#log4j.appender.LOGFILE.DatePattern = '.'yyyy-MM-dd
+#log4j.appender.LOGFILE.layout.ConversionPattern = %d{ABSOLUTE} [%t]  %-5p - %m ( %c{1} )%n
+
+#d�finition du niveau et des Appender du rootLogger
+ #log4j.rootLogger=DEBUG, monAppender
+ 
+#configuration de "monAppender"
+#nous allons envoyer les messages dans la console de Tomcat
+  #log4j.appender.monAppender=org.apache.log4j.ConsoleAppender
+ 
+#d�finition du Layout pour "monAppender"
+ #log4j.appender.monAppender.layout=org.apache.log4j.PatternLayout
+ 
+#d�finition du pattern d'affichage pour "monAppender"
+#voici un exemple de sortie que l'on va obtenir : 2005-06-18 14:53:37 DEBUG [Main] Hello World
+ #log4j.appender.monAppender.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p [%c{1}] %m%n
+

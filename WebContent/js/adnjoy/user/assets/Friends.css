@@ -1,0 +1,56 @@
+.component {
+	margin: 0;
+	padding: 0;
+	width: 600px;
+}
+
+.header-component {
+	height: 29px;
+}
+
+.title-component {
+	padding-left:15px;
+	height: 29px;
+	float: left;
+	font-size: 11px;
+	height: 29px;
+	line-height: 29px;
+}
+
+#nbFriends {
+	
+}
+
+#btn-add {
+	display: inline-block;	
+}
+
+#btn-invite {
+	display: inline-block;
+}
+
+.control-component {
+	color: #A7A365;
+	float: right;
+	height: 23px;
+	line-height: 23px;
+	margin: 3px 0;
+	text-align: center;
+}
+
+.body-component {
+	margin-top: 15px;
+	padding: 0;
+	width: 600px;
+}
+
+.body-control-component {
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.bar-btns {
+	text-align: center;
+	margin-top: 10px;
+}

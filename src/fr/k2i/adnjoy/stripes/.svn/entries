@@ -1,0 +1,71 @@
+10
+
+dir
+164
+svn://127.0.0.1/TRUNCK/AdnJoy/src/fr/k2i/adnjoy/stripes
+svn://127.0.0.1
+
+
+
+2010-04-18T00:10:35.374200Z
+164
+dimitri
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9de293bf-c404-3d47-932a-a38deeaa87b1
+
+WebUtil.java
+file
+199
+
+
+
+2010-05-22T13:36:12.000000Z
+eec31f51330a3618f5c342d3a76aaf5a
+2010-05-23T12:35:59.871288Z
+199
+dimitri
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+763
+
+action
+dir
+
+bean
+dir
+
+security
+dir
+

@@ -1,0 +1,196 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/taglibs.jsp" %>
+
+<s:layout-definition>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>${title}</title>
+	<script src='dwr/engine.js'> </script>
+	<script src='dwr/util.js'> </script>
+		
+		<link rel="stylesheet" type="text/css"	href="js/extjs/resources/css/ext-all.css" />
+
+<!--		<link rel="stylesheet" type="text/css" href="js/yui/fonts/fonts-min.css">-->
+		<link rel="stylesheet" type="text/css" href="js/yui/button/assets/skins/sam/button.css">
+		<link rel="stylesheet" type="text/css" href="js/yui/menu/assets/skins/sam/menu.css">
+	 	
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+		<script type="text/javascript" src="js/extjs/locale/ext-lang-fr.js"></script>
+				
+ 		<script src="js/adnjoy/menu/menu-data.js"></script>
+ 	
+		<script src="js/yui/yahoo-dom-event/yahoo-dom-event.js"></script>
+		<script src="js/yui/container/container-min.js"></script>
+		<script src="js/yui/menu/menu-min.js"></script>
+		<script src="js/yui/element/element-min.js"></script>
+		<script src="js/yui/button/button-min.js"></script>
+	
+		<script src="js/adnjoy/user/ExtLoginBox.js"></script>
+		<script src='js/adnjoy.js'> </script>
+		<script src='dwr/interface/userDwrManager.js'> </script>
+		
+<!--		<script type="text/javascript" src="js/extjs/adapter/yui/ext-yui-adapter.js"></script>-->
+		<script type="text/javascript" src="js/extjs/adapter/ext/ext-base.js"></script>
+
+		<script type="text/javascript" src="js/extjs/pkgs/ext-foundation.js"></script>
+		<script type="text/javascript" src="js/extjs/pkgs/cmp-foundation.js"></script>
+		<script type="text/javascript" src="js/extjs/pkgs/data-foundation.js"></script>
+		
+		<script type="text/javascript" src="js/extjs/locale/ext-lang-fr.js"></script>
+		
+<!--		<script type="text/javascript" src="js/extjs/pkgs/data-grouping.js"></script>-->
+<!--		<script type="text/javascript" src="js/extjs/pkgs/data-json.js"></script>-->
+<!--		<script type="text/javascript" src="js/extjs/pkgs/data-list-views.js"></script>-->
+<!--		<script type="text/javascript" src="js/extjs/pkgs/data-xml.js"></script>-->
+<!--		<script type="text/javascript" src="js/extjs/pkgs/direct.js"></script>-->
+<!--		<script type="text/javascript" src="js/extjs/pkgs/pkg-buttons.js"></script>-->
+<!--		<script type="text/javascript" src="js/extjs/pkgs/pkg-charts.js"></script>-->
+<!--		<script type="text/javascript" src="js/extjs/pkgs/pkg-forms.js"></script>-->
+<!--		<script type="text/javascript" src="js/extjs/pkgs/pkg-grid-editor.js"></script>-->
+<!--		<script type="text/javascript" src="js/extjs/pkgs/pkg-grid-foundation.js"></script>-->
+<!--		<script type="text/javascript" src="js/extjs/pkgs/pkg-grid-grouping.js"></script>-->
+<!--		<script type="text/javascript" src="js/extjs/pkgs/pkg-grid-property.js"></script>-->
+<!--		<script type="text/javascript" src="js/extjs/pkgs/pkg-history.js"></script>-->
+<!--		<script type="text/javascript" src="js/extjs/pkgs/pkg-menu.js"></script>-->
+<!--		<script type="text/javascript" src="js/extjs/pkgs/pkg-tabs.js"></script>-->
+<!--		<script type="text/javascript" src="js/extjs/pkgs/pkg-tips.js"></script>-->
+<!--		<script type="text/javascript" src="js/extjs/pkgs/pkg-toolbars.js"></script>-->
+<!--		<script type="text/javascript" src="js/extjs/pkgs/pkg-tree.js"></script>-->
+<!--		<script type="text/javascript" src="js/extjs/pkgs/resizable.js"></script>-->
+<!--		<script type="text/javascript" src="js/extjs/pkgs/state.js"></script>-->
+
+		<script type="text/javascript" src="js/extjs/pkgs/ext-dd.js"></script>
+		<script type="text/javascript" src="js/extjs/pkgs/window.js"></script>
+
+		
+		<script type="text/javascript"> 
+		    <s:layout-component name="head"></s:layout-component>
+		</script>
+		
+		<s:layout-component name="include"></s:layout-component>
+		<script src="js/adnjoy.js"></script>
+		
+		<script type="text/javascript">
+			YAHOO.util.Event.onContentReady("mainmenu", function () { 
+				var oMenuBar = new YAHOO.widget.MenuBar("mainmenu",{    autosubmenudisplay: true, 
+			                                                            hidedelay: 0 ,
+			                                                            showdelay : 0,
+			                                                            minscrollheight : 120
+																		});
+			 
+				oMenuBar.addItems(menuData);
+				oMenuBar.subscribe("beforeShow",  function(){
+			    	this.element.style.zIndex =999;
+			    });
+				oMenuBar.render();
+			});
+		</script>
+		<script type="text/javascript">
+			var openLogin = null;
+			if("${login}"=="")openLogin = false;
+			else openLogin = true;
+		</script>
+		
+  </head>
+  <body class="yui-skin-sam">
+  <div class="pageClass">
+  
+  	<div class="adnjoy_header">
+		  		<div class="mainHeader">
+		  			<div class="logoAd" style="float: left;">
+		  				<a href="Home.htm"><img src="images/logo4.png" style="border:0 none;"></img></a>
+		  			</div>
+				</div>
+				<div style="float: right;" class="round-block"></div>
+				<div id="userAccount"  style="float: right;">
+				        <c:choose>
+				            <c:when test="${user != null}">
+				            	<div id="connected">
+									<span id="connectedName" class="start">Bienvenue ${user.sex}&nbsp;${user.firstName}&nbsp;${user.lastName}&nbsp;</span><span id="deconnexion" class="txtLink" >Déconnexion</span>
+								</div>
+								<div id ="noConnexion" style="display: none;">
+									<a href="CreateAcount.htm" class="start">Créer un compte</a><span id="connexion" class="end txtLink" >Connexion</span>
+				            	</div>
+				            </c:when>
+				            
+				            <c:otherwise>
+				            	<div id="connected" style="display:none;">
+									<span id="connectedName"></span><span id="deconnexion" class="txtLink" >Deconnexion</span>
+								</div>
+								<div id ="noConnexion"">
+									<a href="CreateAcount.htm" class="start">Créer un compte</a><span id="connexion" class="end txtLink" >Connexion</span>
+				            	</div>
+				            </c:otherwise>
+				            	
+				        </c:choose>
+				</div>
+				<div style="clear: both;"></div>
+				
+  	</div>
+	
+
+  
+	<div id="mainmenu" class="yuimenubar yuimenubarnav">
+	      <div class="bd">
+	      </div>
+	</div>
+    <div id="main" class="adnjoy_body">
+      <s:layout-component name="body">
+      </s:layout-component>
+    </div>
+    <div class="adnjoy_footer">
+    	<div class="adnjoy_footer_left">
+    	</div>
+    	<div class="adnjoy_footer_right">
+    	</div>
+    	
+	    <div class="center_footer">
+    		<a href="">Contact</a>&nbsp;|&nbsp;<a href="">A propos d'AD BeBack</a>&nbsp;|&nbsp;<a href="">Recrutement</a>&nbsp;|&nbsp;<a href="">Conditions générales d'utilisation</a>&nbsp;
+    	</div>
+    </div>
+</div> 
+	   
+    <div id="loginBox" class="x-hidden">
+      	<div class="x-window-header">Login</div>
+  		<div class="x-window-body"> 
+		    <div>
+		    	<div id="messageDiv" style="display: none;"></div>
+		    	<div id="loginBoxErr" style="display: none;color: red;" ></div>
+			    <div id="loginDiv">
+	   				<div class="field_div">
+							<div class="field_label_div"><span>Pseudo&nbsp;:</span></div>
+							<div class="field_input_div"><input type="text" id="inLogin"></div>
+					</div>
+	   				<div class="field_div">
+							<div class="field_label_div"><span>Mot de passe&nbsp;:</span></div>
+							<div class="field_input_div"><input type="password" id="inPwd"></div>
+					</div>
+					<div style="text-align: right;padding-bottom: 5px;"><button id="loginBtn">Connexion</button></div>
+				</div> 
+				<div id="forgotDiv">
+					Renseignez votre Email et cliquez sur le bouton "envoyer". Vous recevrez les instructions sur votre Email.<br />
+	   				<div class="field_div">
+							<div class="field_label_div"><span>Email :&nbsp;*</span></div>
+							<div class="field_input_div"><input type="text" id="inEmail"></div>
+					</div>
+					<div style="text-align: right;padding-bottom: 5px;">
+						<button id="findPwdBtn">Envoyer</button>
+					</div>
+				</div>
+		    </div> 
+		    <div class="footer-login">
+		    	<span id="forgotPwd" class="txtLink">Mot de passe oublié ?</span>
+		    	<span id="backLogin" class="txtLink" style="display:none;">Connexion</span>
+		    </div>
+	   </div> 
+	</div>
+	
+	<div id="panel" class="x-hidden"></div>
+  </body>
+</html>
+
+</s:layout-definition>

@@ -1,0 +1,20 @@
+ul.ULinscription{
+	margin-left: 25px;	
+}
+
+li.LIinscription{
+	font-family: Arial, sans-serif;
+	font-size: 110%;
+	color: #444444;
+	list-style-type: decimal;
+	margin-left: 15px;
+}
+
+.titleInscription{
+	font-size: 120%;
+}
+
+h1{
+	font-size: 130%;
+}
+

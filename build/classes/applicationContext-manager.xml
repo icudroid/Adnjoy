@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+      http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- ************************************************************** -->
+	<bean id="baseURL" class="java.lang.String">
+		<constructor-arg type="java.lang.String">
+			<value>http://www.d-kahn.net/AdnJoy/</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="directory" class="java.lang.String">
+		<constructor-arg type="java.lang.String">
+			<value>/home/dimitri/adnjoy/</value>
+<!--			<value>/home/adnjoy/</value>-->
+<!--			<value>g:/</value>-->
+		</constructor-arg>
+	</bean>
+
+	<bean id="imageDirectory" class="java.lang.String">
+		<constructor-arg type="java.lang.String">
+			<value>images/</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="videoDirectory" class="java.lang.String">
+		<constructor-arg type="java.lang.String">
+			<value>AdVideo/</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="tmpDirectory" class="java.lang.String">
+		<constructor-arg type="java.lang.String">
+			<value>tmpAd/</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="userManagerTarget"
+		class="fr.k2i.adnjoy.manager.impl.UserManagerImpl">
+		<property name="baseURL">
+			<ref bean="baseURL" />
+		</property>
+		<property name="dao">
+			<ref bean="userDao" />
+		</property>
+		<property name="countryDao">
+			<ref bean="countryDao" />
+		</property>
+		<property name="sendMailService">
+			<ref bean="sendMailService" />
+		</property>
+	</bean>
+	
+	<bean id="userManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="target">
+			<ref bean="userManagerTarget" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="countryManagerTarget"
+		class="fr.k2i.adnjoy.manager.impl.CountryManagerImpl">
+		<property name="dao">
+			<ref bean="countryDao" />
+		</property>
+	</bean>
+	
+	<bean id="countryManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="target">
+			<ref bean="countryManagerTarget" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="brandManagerTarget"
+		class="fr.k2i.adnjoy.manager.impl.BrandManagerImpl">
+		<property name="dao">
+			<ref bean="brandDao" />
+		</property>
+		<property name="fileDao">
+			<ref bean="fileDao" />
+		</property>
+		<property name="noShowWithDao">
+			<ref bean="noShowWithDao" />
+		</property>
+	</bean>
+	
+	<bean id="brandManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="target">
+			<ref bean="brandManagerTarget" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="adManagerTarget"
+		class="fr.k2i.adnjoy.manager.impl.AdManagerImpl">
+		<constructor-arg index="0">
+			<ref bean="directory"/>
+		</constructor-arg>
+		<constructor-arg index="1">
+			<ref bean="videoDirectory"/>
+		</constructor-arg>
+		<property name="dao">
+			<ref bean="adDao" />
+		</property>
+		<property name="fileDao">
+			<ref bean="fileDao" />
+		</property>
+		<property name="brandDao">
+			<ref bean="brandDao" />
+		</property>
+		<property name="typeDao">
+			<ref bean="typeDao" />
+		</property>
+	</bean>
+	
+	<bean id="adManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="target">
+			<ref bean="adManagerTarget" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="fileManagerTarget"
+		class="fr.k2i.adnjoy.manager.impl.FileManagerImpl">
+		<property name="dao">
+			<ref bean="fileDao" />
+		</property>
+	</bean>
+	
+	<bean id="fileManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="target">
+			<ref bean="fileManagerTarget" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="typeManagerTarget"
+		class="fr.k2i.adnjoy.manager.impl.TypeManagerImpl">
+		<property name="dao">
+			<ref bean="typeDao" />
+		</property>
+	</bean>
+	
+	<bean id="typeManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="target">
+			<ref bean="typeManagerTarget" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="scoreBlindTestManagerTarget"
+		class="fr.k2i.adnjoy.manager.impl.ScoreBlindTestManagerImpl">
+		<property name="dao">
+			<ref bean="scoreBlindTestDao" />
+		</property>
+		<property name="userDao">
+			<ref bean="userDao" />
+		</property>
+		<property name="jackPotDao">
+			<ref bean="jackPotDao" />
+		</property>
+		<property name="stockObjectDao">
+			<ref bean="stockObjectDao" />
+		</property>
+		<property name="winObjectDao">
+			<ref bean="winObjectDao" />
+		</property>
+		<property name="wonJackPotDao">
+			<ref bean="wonJackPotDao" />
+		</property>
+	</bean>
+	
+	<bean id="scoreBlindTestManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="target">
+			<ref bean="scoreBlindTestManagerTarget" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="tvScoreBlindTestManagerTarget"
+		class="fr.k2i.adnjoy.manager.impl.TVScoreBlindTestManagerImpl">
+		<property name="dao">
+			<ref bean="scoreBlindTestDao" />
+		</property>
+		<property name="userDao">
+			<ref bean="userDao" />
+		</property>
+		<property name="jackPotDao">
+			<ref bean="jackPotDao" />
+		</property>
+		<property name="stockObjectDao">
+			<ref bean="stockObjectDao" />
+		</property>
+		<property name="winObjectDao">
+			<ref bean="winObjectDao" />
+		</property>
+		<property name="wonJackPotDao">
+			<ref bean="wonJackPotDao" />
+		</property>
+		<property name="chanelDao">
+			<ref bean="chanelDao" />
+		</property>
+	</bean>
+	
+	<bean id="tvScoreBlindTestManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="target">
+			<ref bean="tvScoreBlindTestManagerTarget" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="jackPotManagerTarget"
+		class="fr.k2i.adnjoy.manager.impl.JackPotManagerImpl">
+		<property name="dao">
+			<ref bean="jackPotDao" />
+		</property>
+		<property name="adDao">
+			<ref bean="adDao" />
+		</property>		
+		<property name="brandDao">
+			<ref bean="brandDao" />
+		</property>
+		<property name="chanelDao">
+			<ref bean="chanelDao" />
+		</property>
+	</bean>
+	
+	<bean id="jackPotManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="target">
+			<ref bean="jackPotManagerTarget" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="chanelManagerTarget"
+		class="fr.k2i.adnjoy.manager.impl.ChanelManagerImpl">
+		<property name="dao">
+			<ref bean="chanelDao" />
+		</property>
+		<property name="userDao">
+			<ref bean="userDao" />
+		</property>
+		<property name="countryDao">
+			<ref bean="countryDao" />
+		</property>
+		<property name="fileDao">
+			<ref bean="fileDao" />
+		</property>
+	</bean>
+	
+	<bean id="chanelManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="target">
+			<ref bean="chanelManagerTarget" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="wonJackPotManagerTarget"
+		class="fr.k2i.adnjoy.manager.impl.WonJackPotManagerImpl">
+		<property name="dao">
+			<ref bean="wonJackPotDao" />
+		</property>
+	</bean>
+	
+	<bean id="wonJackPotManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="target">
+			<ref bean="wonJackPotManagerTarget" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	
+	
+	<bean id="stockObjectManagerTarget"
+		class="fr.k2i.adnjoy.manager.impl.StockObjectManagerImpl">
+		<property name="dao">
+			<ref bean="stockObjectDao" />
+		</property>
+		<property name="brandDao">
+			<ref bean="brandDao" />
+		</property>
+		<property name="fileDao">
+			<ref bean="fileDao" />
+		</property>
+	</bean>
+	
+	<bean id="stockObjectManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="target">
+			<ref bean="stockObjectManagerTarget" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	
+		
+	<bean id="friendsGroupManagerTarget"
+		class="fr.k2i.adnjoy.manager.impl.FriendsGroupManagerImpl">
+		<property name="dao">
+			<ref bean="friendsGroupDao" />
+		</property>
+		<property name="userDao">
+			<ref bean="userDao" />
+		</property>
+		<property name="sendMailService">
+			<ref bean="sendMailService" />
+		</property>
+		<property name="baseURL">
+			<ref bean="baseURL" />
+		</property>
+	</bean>
+	
+	<bean id="friendsGroupManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="target">
+			<ref bean="friendsGroupManagerTarget" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	
+</beans>

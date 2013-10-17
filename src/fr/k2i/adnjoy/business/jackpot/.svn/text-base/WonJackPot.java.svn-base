@@ -1,0 +1,57 @@
+package fr.k2i.adnjoy.business;
+
+import javax.persistence.CascadeType;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@Table (name="TBL_WON_JACKPOT")
+@DiscriminatorColumn(
+    name="classe",
+    discriminatorType=DiscriminatorType.STRING
+)
+@DiscriminatorValue("WonJackPot")
+public class WonJackPot extends BusinessObject {
+
+	private static final long serialVersionUID = -5095523083771615073L;
+
+	private WinObject value;
+	
+	private User user;
+	
+	@Id @GeneratedValue (strategy=GenerationType.AUTO)
+	public Long getId() {
+		return id;
+	}
+
+	public void setValue(WinObject value) {
+		this.value = value;
+	}
+
+	@ManyToOne( cascade = {CascadeType.PERSIST, CascadeType.MERGE} )
+	@JoinColumn(name="WIN_OBJECT_ID")
+	public WinObject getValue() {
+		return value;
+	}
+
+	@ManyToOne( cascade = {CascadeType.PERSIST, CascadeType.MERGE} )
+    @JoinColumn(name="USER_ID")
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+}

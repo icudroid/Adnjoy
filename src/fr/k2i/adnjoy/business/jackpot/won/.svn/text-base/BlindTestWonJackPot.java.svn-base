@@ -1,0 +1,29 @@
+package fr.k2i.adnjoy.business;
+
+import javax.persistence.CascadeType;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+@Entity
+@DiscriminatorValue("BlindTestWonJackPot")
+public class BlindTestWonJackPot extends WonJackPot {
+	
+	private static final long serialVersionUID = -1504365996255677285L;
+
+	@ManyToOne( cascade = {CascadeType.PERSIST, CascadeType.MERGE} )
+	@JoinColumn(name="JACKPOT_ID")
+	public JackPot getJackPot() {
+		return jackPot;
+	}
+
+	public void setJackPot(JackPot jackPot) {
+		this.jackPot = jackPot;
+	}
+
+	private JackPot jackPot;
+	
+	
+
+}

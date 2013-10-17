@@ -1,0 +1,26 @@
+package fr.k2i.adnjoy.business;
+
+import javax.persistence.CascadeType;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+@Entity
+@DiscriminatorValue("DirectWonJackPot")
+public class DirectWonJackPot extends WonJackPot {
+	private static final long serialVersionUID = -380374947696394379L;
+	
+	private ScheduleAd scheduleAd;
+
+	@ManyToOne( cascade = {CascadeType.PERSIST, CascadeType.MERGE} )
+	@JoinColumn(name="SCHEDULE_AD_ID")
+	public ScheduleAd getScheduleAd() {
+		return scheduleAd;
+	}
+
+	public void setScheduleAd(ScheduleAd scheduleAd) {
+		this.scheduleAd = scheduleAd;
+	}
+	
+}

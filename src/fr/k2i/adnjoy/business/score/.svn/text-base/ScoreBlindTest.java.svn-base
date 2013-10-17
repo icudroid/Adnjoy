@@ -1,0 +1,74 @@
+package fr.k2i.adnjoy.business;
+
+import java.util.Date;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
+@Table (name="TBL_SCORE_BT")
+public class ScoreBlindTest extends BusinessObject {
+
+	private static final long serialVersionUID = -7339356363354572670L;
+	
+	private JackPot jackPot;
+	private Double score;
+	private User user;
+	private Date beginLast;
+	
+	
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	public Date getBeginLast() {
+		return beginLast;
+	}
+
+	public void setBeginLast(Date beginLast) {
+		this.beginLast = beginLast;
+	}
+
+	@ManyToOne( cascade = {CascadeType.PERSIST, CascadeType.MERGE} )
+	@JoinColumn(name="USER_ID")
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	@ManyToOne( cascade = {CascadeType.PERSIST, CascadeType.MERGE} )
+	@JoinColumn(name="JACKPOT_ID")
+	public JackPot getJackPot() {
+		return jackPot;
+	}
+
+	public void setJackPot(JackPot jackPot) {
+		this.jackPot = jackPot;
+	}
+
+
+	public Double getScore() {
+		return score;
+	}
+
+
+	public void setScore(Double score) {
+		this.score = score;
+	}
+
+
+	@Id @GeneratedValue (strategy=GenerationType.AUTO)
+	public Long getId() {
+		return id;
+	}
+
+}

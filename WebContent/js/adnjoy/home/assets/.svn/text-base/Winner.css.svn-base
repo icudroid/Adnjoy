@@ -1,0 +1,50 @@
+.winnerContainer {
+	width: 200px;
+	height: 220px;
+	border: 1px solid #DADADA;
+	background-image: url('bkg-winner.png');
+	background-repeat: repeat-x;
+	margin-top: 15px;
+	margin-left: 15px;
+	float: left;
+}
+
+.winnerContainer h3 {
+	font-size: 150%;
+	font-weight: bold;
+	color: #005EA8;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.winnerDivTxt {
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: left;
+}
+
+.winnerLabel {
+	font-size: 100%;
+	font-weight: bold;
+	color: #005EA8;
+}
+
+.winnerTxt {
+	color: #999999;
+}
+
+.winnerLogoContainer {
+	text-align: center;
+	border: 1px solid #DADADA;
+	margin: 10px;
+}
+
+.winnerLogoContainer div {
+	color: #005EA8;
+}
+
+.winnerLogoContainer img {
+	max-width: 180px;
+	max-height: 70px;
+	margin: 10px;
+}

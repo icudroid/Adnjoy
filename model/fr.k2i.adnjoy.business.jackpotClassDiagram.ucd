@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="fr.k2i.adnjoy.business.jackpotClassDiagram" id="{UMLID=_pxfdgEPNEd-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.jackpot}" metadata="uml2-1.0" initialized="true" tag="10" key="32303037303632392041646E4A6F79">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.1" name="JackPotQuestion" location="2469,255" size="498,360" timstampe="5" stereotype="Entity, andromda_persistence_table" id="{UMLID=_kGx4JCz9Ed-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.jackpot.chanel/JackPotQuestion}" runTimeClassModel="getCorrectResponse(),askedDateTime,reponses,setAskedDateTime(Ljava.util.Date;),setQuestion(Ljava.lang.String;),getAskedDateTime(),setCorrectResponse(Lfr.k2i.adnjoy.business.jackpot.chanel.Response;),getId(),correctResponse,getQuestion(),serialVersionUID,question,getReponses(),setReponses(LCollection;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="108,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="serialVersionUID" size="108,16" id="{UMLID=_7QSwYC0IEd-5l-XUIB4Lrg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="question" size="69,16" id="{UMLID=_6h9Dty0IEd-5l-XUIB4Lrg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="reponses" size="477,21" id="{UMLID=_6h9DtC0IEd-5l-XUIB4Lrg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="correctResponse" size="462,21" id="{UMLID=_6h9DsC0IEd-5l-XUIB4Lrg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="askedDateTime" size="104,16" id="{UMLID=_xAVL8IzNEd-pfttE9ANpeg}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="145,182">
+      <children xsi:type="editmodel:MethodEditModel" name="getAskedDateTime" size="131,16" id="{UMLID=_xAs_YIzNEd-pfttE9ANpeg,JavaID=fr.k2i.adnjoy.business.jackpot.chanel/JackPotQuestion#getAskedDateTime()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAskedDateTime" size="130,16" id="{UMLID=_bHqxpC0JEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.jackpot.chanel/JackPotQuestion#setAskedDateTime(Ljava.util.Date;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getQuestion" size="97,16" id="{UMLID=_6iGNoC0IEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.jackpot.chanel/JackPotQuestion#getQuestion()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setQuestion" size="96,16" id="{UMLID=_6iGNoy0IEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.jackpot.chanel/JackPotQuestion#setQuestion(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getReponses" size="109,21" id="{UMLID=_bHqxoS0JEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.jackpot.chanel/JackPotQuestion#getReponses()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setReponses" size="108,21" id="{UMLID=_xArKMIzNEd-pfttE9ANpeg,JavaID=fr.k2i.adnjoy.business.jackpot.chanel/JackPotQuestion#setReponses(LCollection;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCorrectResponse" size="145,21" id="{UMLID=_bHhApi0JEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.jackpot.chanel/JackPotQuestion#getCorrectResponse()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setCorrectResponse" size="144,21" id="{UMLID=_bHhAqS0JEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.jackpot.chanel/JackPotQuestion#setCorrectResponse(Lfr.k2i.adnjoy.business.jackpot.chanel.Response;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" size="64,16" id="{UMLID=_6iP-oy0IEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.jackpot.chanel/JackPotQuestion#getId()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_6hqIwC0IEd-5l-XUIB4Lrg}" source="//@children.0" target="//@children.1/@sourceConnections.0" targetEnd="//@children.0/@sourceConnections.0/@children.1" sourceEnd="//@children.0/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="249,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.6/@sourceConnections.0" name="JackPot" location="50,255" size="657,328" timstampe="15" stereotype="Entity, andromda_persistence_table, andromda_persistence_inheritance, andromda_persistence_discriminator_column_name, andromda_persistence_discriminator_type" description="UML" id="{UMLID=_MjuGUEPOEd-KNbm5rxLvfw}" runTimeClassModel="startDate,setEndDate(Ljava.util.Date;),getEndDate(),endDate,getAds(),getId(),setStartDate(Ljava.util.Date;),equals(Ljava.lang.Object;),hashCode(),serialVersionUID,ads,getStartDate(),setAds(LCollection;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="108,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="serialVersionUID" size="108,16" id="{UMLID=_Q0bGhEPOEd-KNbm5rxLvfw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="startDate" size="73,16" id="{UMLID=_Q0bGgEPOEd-KNbm5rxLvfw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="endDate" size="70,16" id="{UMLID=_Q0bGgkPOEd-KNbm5rxLvfw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="ads" size="457,21" id="{UMLID=_Q0bGhkPOEd-KNbm5rxLvfw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="101,172">
+      <children xsi:type="editmodel:MethodEditModel" name="getStartDate" size="101,16" id="{UMLID=_Q0bGj0POEd-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.jackpot/JackPot#getStartDate()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setStartDate" size="100,16" id="{UMLID=_Q0bGjEPOEd-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.jackpot/JackPot#setStartDate(Ljava.util.Date;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getEndDate" size="97,16" id="{UMLID=_Q0k3g0POEd-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.jackpot/JackPot#getEndDate()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setEndDate" size="96,16" id="{UMLID=_Q0k3hkPOEd-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.jackpot/JackPot#setEndDate(Ljava.util.Date;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" size="64,16" id="{UMLID=_Q0bGiUPOEd-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.jackpot/JackPot#getId()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAds" size="79,21" id="{UMLID=_Q0k3gEPOEd-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.jackpot/JackPot#getAds()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAds" size="78,21" id="{UMLID=_xiwjkYzNEd-pfttE9ANpeg,JavaID=fr.k2i.adnjoy.business.jackpot/JackPot#setAds(LCollection;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="hashCode" size="89,16" id="{UMLID=_xixxsIzNEd-pfttE9ANpeg,JavaID=fr.k2i.adnjoy.business.jackpot/JackPot#hashCode()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="equals" size="71,16" id="{UMLID=_Q0k3iUPOEd-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.jackpot/JackPot#equals(Ljava.lang.Object;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.5/@sourceConnections.0 //@children.7/@sourceConnections.0 //@children.3/@sourceConnections.0 //@children.0/@sourceConnections.0" size="2,1" autoLocated="true" id="{UMLID=_Q0RVgEPOEd-KNbm5rxLvfw}" source="//@children.1" target="//@children.2" targetEnd="//@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="328,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="147,155" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="{UMLID=_Q1UeYUPOEd-KNbm5rxLvfw}" source="//@children.1" target="//@children.5" targetEnd="//@children.1/@sourceConnections.1/@children.2" label="//@children.1/@sourceConnections.1/@children.0" sourceEnd="//@children.1/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="ownedEnd" location="657,152" id="{UMLID=_Q1UeYkPOEd-KNbm5rxLvfw}" attachSource="true" multiplicityLabel="//@children.1/@sourceConnections.1/@children.1/@children.0" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="714,387" size="6,13" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="ads" location="0,152" id="{UMLID=_Q0bGhkPOEd-KNbm5rxLvfw}" multiplicityLabel="//@children.1/@sourceConnections.1/@children.2/@children.0" roleLabel="//@children.1/@sourceConnections.1/@children.2/@children.1" navigable="true" flags="2">
+        <children xsi:type="editmodel:LabelEditModel" name="1..*" location="714,414" size="16,13" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="- ads" location="706,387" size="24,13" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="{UMLID=_QE1nMUPPEd-KNbm5rxLvfw}" source="//@children.1" target="//@children.7" targetEnd="//@children.1/@sourceConnections.2/@children.2" label="//@children.1/@sourceConnections.2/@children.0" sourceEnd="//@children.1/@sourceConnections.2/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="jackPot" location="657,153" id="{UMLID=_QDzFYEPPEd-KNbm5rxLvfw}" attachSource="true" multiplicityLabel="//@children.1/@sourceConnections.2/@children.1/@children.0" roleLabel="//@children.1/@sourceConnections.2/@children.1/@children.1" navigable="true" flags="2">
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="714,415" size="6,13" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="- jackPot" location="714,388" size="41,13" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="ownedEnd" location="0,153" id="{UMLID=_QE1nMkPPEd-KNbm5rxLvfw}" multiplicityLabel="//@children.1/@sourceConnections.2/@children.2/@children.0" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="1275,388" size="6,13" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.0" name="BusinessObject" location="1433,50" size="295,155" timstampe="87" stereotype="" id="{UMLID=_pVM-cCz1Ed-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business/BusinessObject}" runTimeClassModel="id,getId(),setId(Ljava.lang.Long;),equals(Ljava.lang.Object;),hashCode(),serialVersionUID">
+    <children xsi:type="editmodel:CompartmentEditModel" size="108,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="serialVersionUID" size="108,16" id="{UMLID=_pXvVFSz1Ed-5l-XUIB4Lrg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="id" size="37,16" id="{UMLID=_pXSpICz1Ed-5l-XUIB4Lrg}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="89,72">
+      <children xsi:type="editmodel:MethodEditModel" name="getId" size="64,16" id="{UMLID=_pYMBACz1Ed-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business/BusinessObject#getId()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setId" size="63,16" id="{UMLID=_pXvVFyz1Ed-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business/BusinessObject#setId(Ljava.lang.Long;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="hashCode" size="89,16" id="{UMLID=_w1J2sIzNEd-pfttE9ANpeg,JavaID=fr.k2i.adnjoy.business/BusinessObject#hashCode()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="equals" size="71,16" id="{UMLID=_w1WD8IzNEd-pfttE9ANpeg,JavaID=fr.k2i.adnjoy.business/BusinessObject#equals(Ljava.lang.Object;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.2" name="Chanel" location="1964,255" size="475,681" timstampe="10" stereotype="Entity, andromda_persistence_table" id="{UMLID=_kG7CFSz9Ed-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.ad/Chanel}" runTimeClassModel="getEmail(),phone,getDlFile(),getJackpot(),getFax(),password,getName(),dlFile,setFax(Ljava.lang.String;),setPassword(Ljava.lang.String;),name,setJackpot(Lfr.k2i.adnjoy.business.jackpot.chanel.ChanelJackPot;),equals(Ljava.lang.Object;),login,serialVersionUID,jackpot,setCountry(Lfr.k2i.adnjoy.business.Country;),getLogin(),setDlFile(Lfr.k2i.adnjoy.business.File;),fax,getPassword(),setName(Ljava.lang.String;),getCountry(),setEmail(Ljava.lang.String;),setLogin(Ljava.lang.String;),setPhone(Ljava.lang.String;),country,getPhone(),getId(),email,hashCode()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="108,126">
+      <children xsi:type="editmodel:AttributeEditModel" name="serialVersionUID" size="108,16" id="{UMLID=_bjHiEi0KEd-5l-XUIB4Lrg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="name" size="56,16" id="{UMLID=_bjHiEC0KEd-5l-XUIB4Lrg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="login" size="51,16" id="{UMLID=_dmGGdi0KEd-5l-XUIB4Lrg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="password" size="75,16" id="{UMLID=_dmGGeC0KEd-5l-XUIB4Lrg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="email" size="54,16" id="{UMLID=_dmGGdC0KEd-5l-XUIB4Lrg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="phone" size="59,16" id="{UMLID=_dmGGcC0KEd-5l-XUIB4Lrg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="fax" size="43,16" id="{UMLID=_dmGGci0KEd-5l-XUIB4Lrg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="country" size="438,21" id="{UMLID=_bjRTFC0KEd-5l-XUIB4Lrg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="jackpot" size="454,21" id="{UMLID=_bjRTEC0KEd-5l-XUIB4Lrg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dlFile" size="390,21" id="{UMLID=_xvvPoIzNEd-pfttE9ANpeg}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="102,408">
+      <children xsi:type="editmodel:MethodEditModel" name="getDlFile" size="88,21" id="{UMLID=_xwHqIozNEd-pfttE9ANpeg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#getDlFile()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setDlFile" size="87,21" id="{UMLID=_xwJfUozNEd-pfttE9ANpeg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#setDlFile(Lfr.k2i.adnjoy.business.File;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLogin" size="81,16" id="{UMLID=_dmiyYS0KEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#getLogin()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setLogin" size="80,16" id="{UMLID=_dmiyai0KEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#setLogin(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPassword" size="102,16" id="{UMLID=_dmZoeC0KEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#getPassword()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPassword" size="101,16" id="{UMLID=_dmsjZC0KEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#setPassword(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getEmail" size="81,16" id="{UMLID=_dmiyZC0KEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#getEmail()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setEmail" size="80,16" id="{UMLID=_dmZodS0KEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#setEmail(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPhone" size="86,16" id="{UMLID=_dmiyZy0KEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#getPhone()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPhone" size="85,16" id="{UMLID=_dm1tUi0KEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#setPhone(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFax" size="73,16" id="{UMLID=_dmsjYS0KEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#getFax()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFax" size="72,16" id="{UMLID=_dmsjZy0KEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#setFax(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getJackpot" size="97,21" id="{UMLID=_bjadCi0KEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#getJackpot()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setJackpot" size="96,21" id="{UMLID=_bjadBy0KEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#setJackpot(Lfr.k2i.adnjoy.business.jackpot.chanel.ChanelJackPot;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getName" size="84,16" id="{UMLID=_bjadAS0KEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#getName()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setName" size="83,16" id="{UMLID=_bjRTGy0KEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#setName(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCountry" size="99,21" id="{UMLID=_bjadBC0KEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#getCountry()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setCountry" size="98,21" id="{UMLID=_bjkOAi0KEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#setCountry(Lfr.k2i.adnjoy.business.Country;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" size="64,16" id="{UMLID=_bjRTGC0KEd-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#getId()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="hashCode" size="89,16" id="{UMLID=_xwKtcIzNEd-pfttE9ANpeg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#hashCode()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="equals" size="71,16" id="{UMLID=_xwIRMozNEd-pfttE9ANpeg,JavaID=fr.k2i.adnjoy.business.ad/Chanel#equals(Ljava.lang.Object;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_bi9xEC0KEd-5l-XUIB4Lrg}" source="//@children.3" target="//@children.1/@sourceConnections.0" targetEnd="//@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="237,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="TVJackPot" location="280,986" size="494,268" timstampe="13" stereotype="Entity, andromda_persistence_discriminator_value" id="{UMLID=_cmD4sCz9Ed-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.jackpot/TVJackPot}" runTimeClassModel="chanel,setQuestion(Lfr.k2i.adnjoy.business.jackpot.chanel.JackPotQuestion;),hashCode(),equals(Ljava.lang.Object;),getQuestion(),serialVersionUID,question,getChanel(),setChanel(Lfr.k2i.adnjoy.business.ad.Chanel;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="108,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="serialVersionUID" size="108,16" id="{UMLID=_kGx4ICz9Ed-5l-XUIB4Lrg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="chanel" size="424,21" id="{UMLID=_kG7CEyz9Ed-5l-XUIB4Lrg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="question" size="473,21" id="{UMLID=_kGx4Iiz9Ed-5l-XUIB4Lrg}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="103,128">
+      <children xsi:type="editmodel:MethodEditModel" name="getChanel" size="95,21" id="{UMLID=_kG7CGiz9Ed-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.jackpot/TVJackPot#getChanel()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setChanel" size="94,21" id="{UMLID=_kHOkFSz9Ed-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.jackpot/TVJackPot#setChanel(Lfr.k2i.adnjoy.business.ad.Chanel;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getQuestion" size="103,21" id="{UMLID=_kHEzEiz9Ed-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.jackpot/TVJackPot#getQuestion()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setQuestion" size="102,21" id="{UMLID=_oMlB4ozOEd-pfttE9ANpeg,JavaID=fr.k2i.adnjoy.business.jackpot/TVJackPot#setQuestion(Lfr.k2i.adnjoy.business.jackpot.chanel.JackPotQuestion;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="hashCode" size="89,16" id="{UMLID=_oMmQAIzOEd-pfttE9ANpeg,JavaID=fr.k2i.adnjoy.business.jackpot/TVJackPot#hashCode()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="equals" size="71,16" id="{UMLID=_kHEzGyz9Ed-5l-XUIB4Lrg,JavaID=fr.k2i.adnjoy.business.jackpot/TVJackPot#equals(Ljava.lang.Object;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_kBtK4Cz9Ed-5l-XUIB4Lrg}" source="//@children.4" target="//@children.6/@sourceConnections.0" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="247,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="657,318"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="{UMLID=_kKf6giz9Ed-5l-XUIB4Lrg}" source="//@children.4" target="//@children.0" targetEnd="//@children.4/@sourceConnections.1/@children.2" label="//@children.4/@sourceConnections.1/@children.0" sourceEnd="//@children.4/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="ownedEnd" location="494,10" id="{UMLID=_kKf6gyz9Ed-5l-XUIB4Lrg}" attachSource="true" multiplicityLabel="//@children.4/@sourceConnections.1/@children.1/@children.0" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="781,1003" size="6,13" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="question" location="10,360" id="{UMLID=_kGx4Iiz9Ed-5l-XUIB4Lrg}" multiplicityLabel="//@children.4/@sourceConnections.1/@children.2/@children.0" roleLabel="//@children.4/@sourceConnections.1/@children.2/@children.1" navigable="true" flags="2">
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="2466,622" size="6,13" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="- question" location="2486,622" size="47,13" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="{UMLID=_kKWwkiz9Ed-5l-XUIB4Lrg}" source="//@children.4" target="//@children.3" targetEnd="//@children.4/@sourceConnections.2/@children.2" label="//@children.4/@sourceConnections.2/@children.0" sourceEnd="//@children.4/@sourceConnections.2/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="ownedEnd" location="484,0" id="{UMLID=_kKWwkyz9Ed-5l-XUIB4Lrg}" attachSource="true" multiplicityLabel="//@children.4/@sourceConnections.2/@children.1/@children.0" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="751,966" size="6,13" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="chanel" location="0,671" id="{UMLID=_kG7CEyz9Ed-5l-XUIB4Lrg}" multiplicityLabel="//@children.4/@sourceConnections.2/@children.2/@children.0" roleLabel="//@children.4/@sourceConnections.2/@children.2/@children.1" navigable="true" flags="2">
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="1951,933" size="6,13" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="- chanel" location="1919,906" size="38,13" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.1" name="AdBrandPossibiliites" location="737,255" size="521,306" timstampe="7" stereotype="Entity, andromda_persistence_table" description="UML" id="{UMLID=_4AbOYEM-Ed-KNbm5rxLvfw}" runTimeClassModel="setAd(Lfr.k2i.adnjoy.business.ad.Ad;),getAd(),getId(),getPauseBefore(),ad,getPossibilities(),setPauseBefore(Ljava.lang.Long;),pauseBefore,serialVersionUID,setPossibilities(LCollection;),possibilities">
+    <children xsi:type="editmodel:CompartmentEditModel" size="108,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="serialVersionUID" size="108,16" id="{UMLID=_PVNjgkM_Ed-KNbm5rxLvfw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="ad" size="376,21" id="{UMLID=_PVNjgEM_Ed-KNbm5rxLvfw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="pauseBefore" size="90,16" id="{UMLID=_w5MpMIzNEd-pfttE9ANpeg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="possibilities" size="500,21" id="{UMLID=_PVNjhEM_Ed-KNbm5rxLvfw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="117,146">
+      <children xsi:type="editmodel:MethodEditModel" name="getAd" size="74,21" id="{UMLID=_PVNjh0M_Ed-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.ad/AdBrandPossibiliites#getAd()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAd" size="73,21" id="{UMLID=_PVXUi0M_Ed-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.ad/AdBrandPossibiliites#setAd(Lfr.k2i.adnjoy.business.ad.Ad;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPossibilities" size="114,21" id="{UMLID=_PVXUiEM_Ed-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.ad/AdBrandPossibiliites#getPossibilities()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPossibilities" size="113,21" id="{UMLID=_w5ZdgIzNEd-pfttE9ANpeg,JavaID=fr.k2i.adnjoy.business.ad/AdBrandPossibiliites#setPossibilities(LCollection;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" size="64,16" id="{UMLID=_PVXUgkM_Ed-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.ad/AdBrandPossibiliites#getId()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPauseBefore" size="117,16" id="{UMLID=_w5b5wIzNEd-pfttE9ANpeg,JavaID=fr.k2i.adnjoy.business.ad/AdBrandPossibiliites#getPauseBefore()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPauseBefore" size="116,16" id="{UMLID=_PVXUhUM_Ed-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.ad/AdBrandPossibiliites#setPauseBefore(Ljava.lang.Long;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_PVEZkEM_Ed-KNbm5rxLvfw}" source="//@children.5" target="//@children.1/@sourceConnections.0" targetEnd="//@children.5/@sourceConnections.0/@children.1" sourceEnd="//@children.5/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="260,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,77"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="NetJackPot" location="50,986" size="200,84" timstampe="2" stereotype="Entity, andromda_persistence_discriminator_value" id="{UMLID=_bAdwcIzPEd-pfttE9ANpeg,JavaID=fr.k2i.adnjoy.business.jackpot/NetJackPot}" runTimeClassModel="serialVersionUID">
+    <children xsi:type="editmodel:CompartmentEditModel" size="108,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="serialVersionUID" size="108,16" id="{UMLID=_bFdlMIzPEd-pfttE9ANpeg}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.4/@sourceConnections.0" size="2,1" autoLocated="true" id="{UMLID=_bFcXEIzPEd-pfttE9ANpeg}" source="//@children.6" target="//@children.1" targetEnd="//@children.6/@sourceConnections.0/@children.1" sourceEnd="//@children.6/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="100,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="328,328" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.2" name="Score" location="1288,255" size="646,307" timstampe="16" stereotype="Entity, andromda_persistence_inheritance, andromda_persistence_table, andromda_persistence_discriminator_column_name, andromda_persistence_discriminator_type" description="UML" id="{UMLID=_HeYHsEPPEd-KNbm5rxLvfw}" runTimeClassModel="setUser(Lfr.k2i.adnjoy.business.user.User;),getScore(),setScore(Ljava.lang.Double;),setJackPot(Lfr.k2i.adnjoy.business.jackpot.JackPot;),jackPot,getId(),getUser(),score,serialVersionUID,user,getJackPot()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="108,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="serialVersionUID" size="108,16" id="{UMLID=_QDzFZEPPEd-KNbm5rxLvfw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="jackPot" size="432,21" id="{UMLID=_QDzFYEPPEd-KNbm5rxLvfw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="score" size="55,16" id="{UMLID=_QDzFYkPPEd-KNbm5rxLvfw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="user" size="400,21" id="{UMLID=_QDzFZkPPEd-KNbm5rxLvfw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="98,146">
+      <children xsi:type="editmodel:MethodEditModel" name="getUser" size="84,21" id="{UMLID=_QDzFcUPPEd-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.score/Score#getUser()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setUser" size="83,21" id="{UMLID=_QDzFdEPPEd-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.score/Score#setUser(Lfr.k2i.adnjoy.business.user.User;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getJackPot" size="98,21" id="{UMLID=_QDzFbkPPEd-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.score/Score#getJackPot()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setJackPot" size="97,21" id="{UMLID=_QDzFaEPPEd-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.score/Score#setJackPot(Lfr.k2i.adnjoy.business.jackpot.JackPot;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getScore" size="83,16" id="{UMLID=_QD82Y0PPEd-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.score/Score#getScore()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setScore" size="82,16" id="{UMLID=_QDzFa0PPEd-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.score/Score#setScore(Ljava.lang.Double;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" size="64,16" id="{UMLID=_QD82YEPPEd-KNbm5rxLvfw,JavaID=fr.k2i.adnjoy.business.score/Score#getId()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_QDgKcEPPEd-KNbm5rxLvfw}" source="//@children.7" target="//@children.1/@sourceConnections.0" targetEnd="//@children.7/@sourceConnections.0/@children.1" sourceEnd="//@children.7/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="323,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=3" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="2744,1008" rulerUnit="cm" gridShow="true">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Naturel" methodSorter="Naturel" shortPackageNameFormat="true" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showMethods="true" showAttributes="true" showLiterlas="true" showInnerEntity="true"/>
+</editmodel:ClassDiagramEditModel>
